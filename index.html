@@ -17,11 +17,9 @@
             <nav class="main-nav">
                 <ul>
                     <li><a href="#overview" class="active">Overview</a></li>
-                    <li><a href="#dataset">Dataset</a></li>
-                    <li><a href="#research-analysis">Research</a></li>
+                    <li><a href="#dataset">Dataset & Research</a></li>
                     <li><a href="#leaderboard">Leaderboard</a></li>
-                    <li><a href="#agent-demo">Agent Demo</a></li>
-                    <li><a href="#casestudy">Case Studies</a></li>
+                    <li><a href="#demo">Demo & Cases</a></li>
                     <li><a href="https://github.com/tanghaom/AppEvalPilot" target="_blank">GitHub <i class="fab fa-github"></i></a></li>
                 </ul>
             </nav>
@@ -130,15 +128,7 @@
                             <div class="stat-label">Task Categories</div>
                         </div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-icon">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                        <div class="stat-content">
-                            <div class="stat-number">3</div>
-                            <div class="stat-label">Evaluation Dimensions</div>
-                        </div>
-                    </div>
+
                     <div class="stat-item">
                         <div class="stat-icon">
                             <i class="fas fa-download"></i>
@@ -152,13 +142,31 @@
                 
                 <div class="dataset-features">
                     <h4>Key Features</h4>
-                    <ul>
-                        <li><strong>Diverse Task Types:</strong> Display (50.0%), Data (14.4%), Analysis (18.6%), Game (17.0%)</li>
-                        <li><strong>Real-World Scenarios:</strong> Based on actual development requirements and challenges</li>
-                        <li><strong>Multi-Dimensional Evaluation:</strong> Design Understanding, Code Implementation, Debugging</li>
-                        <li><strong>Multimodal Complexity:</strong> Text, images, audio and tabular data integration</li>
-                        <li><strong>Open-Ended Tasks:</strong> Repository construction from scratch rather than predefined structures</li>
-                    </ul>
+                    <div class="features-content">
+                        <div class="features-list">
+                            <ul>
+                                <li><strong>Real-World Scenarios:</strong> Based on actual development requirements and challenges</li>
+                                <li><strong>Multi-Dimensional Evaluation:</strong> Requirement Understanding, Code Implementation, Debugging</li>
+                                <li><strong>Multimodal Complexity:</strong> Text, images, audio and tabular data integration</li>
+                                <li><strong>Open-Ended Tasks:</strong> Repository construction from scratch</li>
+                            </ul>
+                        </div>
+                        <div class="task-distribution">
+                            <h5>Task Type Distribution</h5>
+                            <div class="pie-chart">
+                                <div class="pie-slice slice-display" style="--start: 0; --end: 180;" data-label="Display (50.0%)"></div>
+                                <div class="pie-slice slice-analysis" style="--start: 180; --end: 247;" data-label="Analysis (18.6%)"></div>
+                                <div class="pie-slice slice-game" style="--start: 247; --end: 308;" data-label="Game (17.0%)"></div>
+                                <div class="pie-slice slice-data" style="--start: 308; --end: 360;" data-label="Data (14.4%)"></div>
+                            </div>
+                            <div class="chart-legend">
+                                <div class="legend-item"><span class="legend-color display"></span>Display (50.0%)</div>
+                                <div class="legend-item"><span class="legend-color analysis"></span>Analysis (18.6%)</div>
+                                <div class="legend-item"><span class="legend-color game"></span>Game (17.0%)</div>
+                                <div class="legend-item"><span class="legend-color data"></span>Data (14.4%)</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="dataset-actions">
@@ -188,9 +196,7 @@
                     <h3>Evaluation Pipeline Architecture</h3>
                     <div class="chart-viewer">
                         <img src="images/charts/pipeline-1.png" alt="Evaluation Pipeline Architecture" class="chart-image">
-                        <div class="chart-actions">
-                            <a href="../images/pipeline.pdf" target="_blank" class="btn btn-small">Download PDF</a>
-                        </div>
+
                     </div>
                     <p class="chart-description">Comprehensive flow architecture of the RealDevWorld evaluation system, including task assignment, agent execution, result evaluation and other key components.</p>
                 </div>
@@ -199,9 +205,7 @@
                     <h3>Dataset Case Analysis</h3>
                     <div class="chart-viewer">
                         <img src="images/charts/dataset_cases-1.png" alt="Dataset Case Analysis" class="chart-image">
-                        <div class="chart-actions">
-                            <a href="../images/dataset_cases.pdf" target="_blank" class="btn btn-small">Download PDF</a>
-                        </div>
+
                     </div>
                     <p class="chart-description">Detailed showcase of typical cases in the RealDevBench dataset, including task types, difficulty distribution, and evaluation criteria.</p>
                 </div>
@@ -210,9 +214,7 @@
                     <h3>Performance Analysis Charts</h3>
                     <div class="chart-viewer">
                         <img src="images/charts/analysis_charts-1.png" alt="Performance Analysis Charts" class="chart-image">
-                        <div class="chart-actions">
-                            <a href="../images/analysis_charts_new.pdf" target="_blank" class="btn btn-small">Download PDF</a>
-                        </div>
+
                     </div>
                     <p class="chart-description">Latest performance analysis charts showing comparative performance of different AI Agents across various evaluation dimensions.</p>
                 </div>
@@ -221,9 +223,7 @@
                     <h3>Research Methodology</h3>
                     <div class="chart-viewer">
                         <img src="images/charts/methodology-1.png" alt="Research Methodology" class="chart-image">
-                        <div class="chart-actions">
-                            <a href="../images/V9.pdf" target="_blank" class="btn btn-small">Download PDF</a>
-                        </div>
+
                     </div>
                     <p class="chart-description">Comprehensive research methodology documentation including evaluation framework design, metric definitions, and experimental setup.</p>
                 </div>
@@ -236,7 +236,7 @@
             <h2 class="section-title">Leaderboard</h2>
             <div class="leaderboard-tabs">
                 <button class="tab-button active" data-tab="overall">Overall Performance</button>
-                <button class="tab-button" data-tab="design">Design Understanding</button>
+                <button class="tab-button" data-tab="design">Requirement Understanding</button>
                 <button class="tab-button" data-tab="implementation">Code Implementation</button>
                 <button class="tab-button" data-tab="debug">Debugging Capability</button>
             </div>
@@ -295,8 +295,8 @@
                     </table>
                 </div>
                 <div class="tab-content" id="design">
-                    <!-- Design understanding leaderboard content -->
-                    <p>Design understanding leaderboard data loading...</p>
+                    <!-- Requirement understanding leaderboard content -->
+                    <p>Requirement understanding leaderboard data loading...</p>
                 </div>
                 <div class="tab-content" id="implementation">
                     <!-- Code implementation leaderboard content -->
@@ -310,10 +310,10 @@
         </div>
     </section>
 
-    <section id="agent-demo" class="section agent-demo">
+    <section id="demo" class="section agent-demo">
         <div class="container">
-            <h2 class="section-title">AppEvalPilot Demo</h2>
-            <p class="section-subtitle">Watch our automated evaluation agent in action</p>
+            <h2 class="section-title">Demo & Case Studies</h2>
+            <p class="section-subtitle">Watch our automated evaluation agent in action and explore detailed case studies</p>
             
             <div class="demo-video-section">
                 <div class="video-container">
@@ -387,35 +387,34 @@
                     <a href="https://github.com/tanghaom/AppEvalPilot" class="btn btn-primary" target="_blank">
                         <i class="fab fa-github"></i> View Source Code
                     </a>
-                    <a href="#research-analysis" class="btn btn-secondary">
+                    <a href="#dataset" class="btn btn-secondary">
                         <i class="fas fa-chart-bar"></i> View Research Details
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="casestudy" class="section case-study">
-        <div class="container">
-            <h2 class="section-title">Case Studies</h2>
-            <div class="case-study-grid">
-                <div class="case-study-card">
-                    <img src="images/case1.jpg" alt="Case Study 1">
-                    <h3>Frontend Development Evaluation</h3>
-                    <p>Analysis of AI agents' performance in responsive design implementation</p>
-                    <a href="https://appevalpilot.realdev.world/" class="btn-small" target="_blank">View Details</a>
-                </div>
-                <div class="case-study-card">
-                    <img src="images/case2.jpg" alt="Case Study 2">
-                    <h3>API Integration Evaluation</h3>
-                    <p>Assessment of AI agents' ability to understand and implement API integrations</p>
-                    <a href="https://appevalpilot.realdev.world/" class="btn-small" target="_blank">View Details</a>
-                </div>
-                <div class="case-study-card">
-                    <img src="images/case3.jpg" alt="Case Study 3">
-                    <h3>Debugging & Problem Solving</h3>
-                    <p>Exploring AI agents' efficiency in code debugging and error correction</p>
-                    <a href="https://appevalpilot.realdev.world/" class="btn-small" target="_blank">View Details</a>
+            
+            <!-- Case Studies Section -->
+            <div class="case-studies-section">
+                <h3 class="features-title">Case Studies</h3>
+                <div class="case-study-grid">
+                    <div class="case-study-card">
+                        <img src="images/charts/dataset_cases-1.png" alt="Case Study 1">
+                        <h3>Frontend Development Evaluation</h3>
+                        <p>Analysis of AI agents' performance in responsive design implementation</p>
+                        <a href="https://appevalpilot.realdev.world/" class="btn-small" target="_blank">View Details</a>
+                    </div>
+                    <div class="case-study-card">
+                        <img src="images/charts/analysis_charts-1.png" alt="Case Study 2">
+                        <h3>API Integration Evaluation</h3>
+                        <p>Assessment of AI agents' ability to understand and implement API integrations</p>
+                        <a href="https://appevalpilot.realdev.world/" class="btn-small" target="_blank">View Details</a>
+                    </div>
+                    <div class="case-study-card">
+                        <img src="images/charts/methodology-1.png" alt="Case Study 3">
+                        <h3>Debugging & Problem Solving</h3>
+                        <p>Exploring AI agents' efficiency in code debugging and error correction</p>
+                        <a href="https://appevalpilot.realdev.world/" class="btn-small" target="_blank">View Details</a>
+                    </div>
                 </div>
             </div>
         </div>

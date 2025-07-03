@@ -2114,4 +2114,163 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     font-size: 0.9rem;
     opacity: 0.8;
+}
+
+/* ====== 任务分布饼图 ====== */
+.features-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.features-list ul {
+    margin: 0;
+    padding: 0;
+}
+
+.task-distribution {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task-distribution h5 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.pie-chart {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 20px;
+    background: conic-gradient(
+        #4A90E2 0deg 180deg,
+        #7B68EE 180deg 247deg,
+        #FF6B6B 247deg 308deg,
+        #4ECDC4 308deg 360deg
+    );
+    border: 3px solid white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.chart-legend {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    width: 100%;
+    max-width: 200px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--text-color);
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.legend-color.display {
+    background-color: #4A90E2;
+}
+
+.legend-color.analysis {
+    background-color: #7B68EE;
+}
+
+.legend-color.game {
+    background-color: #FF6B6B;
+}
+
+.legend-color.data {
+    background-color: #4ECDC4;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .features-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .task-distribution {
+        order: -1;
+    }
+    
+    .pie-chart {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .chart-legend {
+        max-width: 180px;
+    }
+    
+    .legend-item {
+        font-size: 0.8rem;
+    }
+}
+
+/* ====== Demo 页面中的 Case Studies ====== */
+.case-studies-section {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 2px solid var(--border-color);
+}
+
+.case-studies-section .features-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.case-studies-section .case-study-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.case-studies-section .case-study-card {
+    background-color: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.case-studies-section .case-study-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.case-studies-section .case-study-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.case-studies-section .case-study-card h3 {
+    padding: 20px 20px 10px;
+    font-size: 1.3rem;
+}
+
+.case-studies-section .case-study-card p {
+    padding: 0 20px 20px;
+    color: var(--light-text);
+}
+
+.case-studies-section .case-study-card .btn-small {
+    margin: 0 20px 20px;
+    display: inline-block;
 } 
