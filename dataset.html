@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealDevBench Dataset - RealDevWorld Leaderboard</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title">RealDevWorld Leaderboard</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#leaderboard">Leaderboard</a></li>
+                    <li><a href="index.html#dataset" class="active">Dataset</a></li>
+                    <li><a href="index.html#casestudy">Case Studies</a></li>
+                    <li><a href="https://github.com/tanghaom/AppEvalPilot" target="_blank">GitHub <i class="fab fa-github"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section dataset-detail">
+        <div class="container">
+            <h2 class="section-title">RealDevBench Dataset</h2>
+            <p class="dataset-intro">
+                RealDevBench is a benchmark dataset designed to evaluate AI agents' capabilities in real-world application development scenarios. It includes various application development tasks, from frontend design implementation to backend API development, covering multiple aspects of software development.
+            </p>
+            
+            <div class="dataset-stats">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Development Tasks</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Task Categories</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Evaluation Dimensions</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Tech Stacks</div>
+                </div>
+            </div>
+            
+            <div class="dataset-tabs">
+                <div class="tab-header">
+                    <button class="tab-button active" data-tab="overview">Overview</button>
+                    <button class="tab-button" data-tab="structure">Data Structure</button>
+                    <button class="tab-button" data-tab="examples">Example Tasks</button>
+                    <button class="tab-button" data-tab="download">Get Dataset</button>
+                </div>
+                <div class="tab-content active" id="overview">
+                    <h3>Dataset Overview</h3>
+                    
+                    <p>The RealDevBench dataset consists of real-world application development tasks derived from actual development projects and challenges. Each task provides detailed requirement descriptions, expected output results, and evaluation criteria.</p>
+                    
+                    <div class="overview-cards">
+                        <div class="overview-card">
+                            <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
+                            <h4>Task Diversity</h4>
+                            <p>Covers frontend, backend, full-stack, mobile applications, and other development task types, reflecting the complexity of real development scenarios.</p>
+                        </div>
+                        <div class="overview-card">
+                            <div class="card-icon"><i class="fas fa-tasks"></i></div>
+                            <h4>Multi-level Difficulty</h4>
+                            <p>Tasks range from simple to complex, enabling comprehensive evaluation of AI agents across different challenge levels.</p>
+                        </div>
+                        <div class="overview-card">
+                            <div class="card-icon"><i class="fas fa-check-circle"></i></div>
+                            <h4>Detailed Evaluation Criteria</h4>
+                            <p>Each task comes with clear evaluation criteria covering everything from functionality implementation to code quality and performance.</p>
+                        </div>
+                        <div class="overview-card">
+                            <div class="card-icon"><i class="fas fa-project-diagram"></i></div>
+                            <h4>Complete Development Process</h4>
+                            <p>Task design encompasses the complete development process from requirement understanding to design, implementation, and testing.</p>
+                        </div>
+                    </div>
+                    
+                    <h4>Dataset Features</h4>
+                    <ul class="dataset-features">
+                        <li>
+                            <strong>Authenticity</strong>: Tasks come from real projects, not artificially constructed simple examples
+                        </li>
+                        <li>
+                            <strong>Comprehensiveness</strong>: Covers multiple aspects of software development and technology stacks
+                        </li>
+                        <li>
+                            <strong>Standardization</strong>: Unified description format and evaluation standards
+                        </li>
+                        <li>
+                            <strong>Extensibility</strong>: Easy to add new tasks and evaluation dimensions
+                        </li>
+                        <li>
+                            <strong>Practicality</strong>: Focuses on practical application scenarios rather than purely academic tests
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="structure">
+                    <h3>Data Structure</h3>
+                    
+                    <p>The RealDevBench dataset is organized in a structured JSON format for easy processing and extension. Each task includes the following main fields:</p>
+                    
+                    <div class="code-block">
+                        <pre><code>{
+  "task_id": "FE-001",
+  "title": "Responsive Product Display Page",
+  "category": "Frontend Development",
+  "difficulty": "Medium",
+  "description": {
+    "background": "...",
+    "requirements": ["...", "..."],
+    "constraints": ["...", "..."]
+  },
+  "resources": {
+    "api_docs": "...",
+    "design_files": ["...", "..."],
+    "starter_code": "..."
+  },
+  "evaluation": {
+    "functional_criteria": ["...", "..."],
+    "non_functional_criteria": ["...", "..."],
+    "scoring_weights": {
+      "design_understanding": 0.3,
+      "code_implementation": 0.5,
+      "debugging": 0.2
+    }
+  },
+  "expected_output": {
+    "description": "...",
+    "examples": ["...", "..."]
+  },
+  "metadata": {
+    "created_at": "2024-05-15",
+    "version": "1.0",
+    "tags": ["React", "Responsive", "E-commerce"]
+  }
+}</code></pre>
+                    </div>
+                    
+                    <h4>Main Data Fields Explanation</h4>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Field</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>task_id</code></td>
+                                <td>The unique identifier for the task, formatted as "Category-Number"</td>
+                            </tr>
+                            <tr>
+                                <td><code>title</code></td>
+                                <td>A short descriptive title for the task</td>
+                            </tr>
+                            <tr>
+                                <td><code>category</code></td>
+                                <td>The development category the task belongs to (frontend, backend, full-stack, etc.)</td>
+                            </tr>
+                            <tr>
+                                <td><code>difficulty</code></td>
+                                <td>The difficulty level of the task (easy, medium, hard)</td>
+                            </tr>
+                            <tr>
+                                <td><code>description</code></td>
+                                <td>Detailed description containing task background, requirements, and constraints</td>
+                            </tr>
+                            <tr>
+                                <td><code>resources</code></td>
+                                <td>Task-related resources, such as API documentation, design files, etc.</td>
+                            </tr>
+                            <tr>
+                                <td><code>evaluation</code></td>
+                                <td>Task evaluation criteria and scoring weights</td>
+                            </tr>
+                            <tr>
+                                <td><code>expected_output</code></td>
+                                <td>Description of expected task completion results and examples</td>
+                            </tr>
+                            <tr>
+                                <td><code>metadata</code></td>
+                                <td>Task metadata including creation time, version, and tags</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-content" id="examples">
+                    <h3>Example Tasks</h3>
+                    
+                    <p>The following are some example tasks from the RealDevBench dataset, showcasing different types and difficulty levels of development challenges:</p>
+                    
+                    <div class="example-task">
+                        <div class="task-header">
+                            <h4>Task: Responsive E-commerce Product List Page</h4>
+                            <div class="task-meta">
+                                <span class="badge">Frontend Development</span>
+                                <span class="badge">Medium Difficulty</span>
+                                <span class="badge">React</span>
+                            </div>
+                        </div>
+                        <div class="task-content">
+                            <h5>Background</h5>
+                            <p>An e-commerce website needs a product listing page that can display product information and provide filtering, sorting, and pagination functionality. The page needs to adapt to different screen sizes, from mobile devices to desktop.</p>
+                            
+                            <h5>Main Requirements</h5>
+                            <ul>
+                                <li>Display product cards, including image, name, price, rating, and short description</li>
+                                <li>Implement filtering by category, price range, rating, etc.</li>
+                                <li>Provide sorting options (price low to high, price high to low, rating)</li>
+                                <li>Implement pagination or infinite scroll loading</li>
+                                <li>Responsive design, adapting to mobile and desktop</li>
+                            </ul>
+                            
+                            <h5>Evaluation Dimensions</h5>
+                            <ul>
+                                <li><strong>Design Understanding</strong>: Grasp and implementation of responsive design principles</li>
+                                <li><strong>Code Implementation</strong>: Quality of component structure, state management, and data processing</li>
+                                <li><strong>User Experience</strong>: Interaction design, loading performance, and usability</li>
+                            </ul>
+                        </div>
+                        <div class="task-image">
+                            <img src="images/task_example1.jpg" alt="Task Example Preview">
+                        </div>
+                    </div>
+                    
+                    <div class="example-task">
+                        <div class="task-header">
+                            <h4>Task: RESTful API Design and Implementation</h4>
+                            <div class="task-meta">
+                                <span class="badge">Backend Development</span>
+                                <span class="badge">Hard</span>
+                                <span class="badge">Node.js</span>
+                            </div>
+                        </div>
+                        <div class="task-content">
+                            <h5>Background</h5>
+                            <p>Design and implement a RESTful API for an online learning platform supporting course management, user registration, and learning progress tracking. The API needs to support authentication, authorization, data validation, and error handling.</p>
+                            
+                            <h5>Main Requirements</h5>
+                            <ul>
+                                <li>Design an API architecture following RESTful principles</li>
+                                <li>Implement user authentication and role-based authorization</li>
+                                <li>Design data models and relationships</li>
+                                <li>Implement complete CRUD operations</li>
+                                <li>Add appropriate error handling and logging</li>
+                                <li>Implement basic performance optimizations (e.g., caching)</li>
+                            </ul>
+                            
+                            <h5>Evaluation Dimensions</h5>
+                            <ul>
+                                <li><strong>API Design</strong>: Interface consistency, resource naming, status code usage</li>
+                                <li><strong>Security</strong>: Authentication and authorization implementation, input validation, security best practices</li>
+                                <li><strong>Code Quality</strong>: Structural organization, error handling, test coverage</li>
+                            </ul>
+                        </div>
+                        <div class="task-image">
+                            <img src="images/task_example2.jpg" alt="Task Example Preview">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="download">
+                    <h3>Get the Dataset</h3>
+                    
+                    <div class="download-options">
+                        <div class="download-card">
+                            <div class="download-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <h4>GitHub Repository</h4>
+                            <p>Get the complete dataset and related code through GitHub</p>
+                            <a href="https://github.com/tanghaom/AppEvalPilot" class="btn" target="_blank">Visit Repository</a>
+                        </div>
+                        <div class="download-card">
+                            <div class="download-icon">
+                                <i class="fas fa-cloud-download-alt"></i>
+                            </div>
+                            <h4>Hugging Face</h4>
+                            <p>Download the preprocessed dataset from Hugging Face Datasets</p>
+                            <a href="https://huggingface.co/datasets/stellaHsr-mm/RealDevBench" class="btn" target="_blank">Access Dataset</a>
+                        </div>
+                    </div>
+                    
+                    <div class="usage-guide">
+                        <h4>Usage Guide</h4>
+                        <p>Follow these steps to use the RealDevBench dataset:</p>
+                        <ol>
+                            <li>Download the dataset from GitHub or Hugging Face</li>
+                            <li>Set up your evaluation environment according to the documentation</li>
+                            <li>Choose a subset of tasks to evaluate or use the complete dataset</li>
+                            <li>Run the evaluation scripts, connecting your AI agent to the evaluation framework</li>
+                            <li>Analyze the results and generate performance reports</li>
+                        </ol>
+                        <p>Detailed usage guides and API documentation can be found in the <a href="https://github.com/tanghaom/AppEvalPilot" target="_blank">GitHub repository</a>.</p>
+                    </div>
+                    
+                    <div class="citation-info">
+                        <h4>How to Cite</h4>
+                        <p>If you use the RealDevBench dataset in your research, please cite the following paper:</p>
+                        <pre><code>@inproceedings{realdevbench2024,
+  title = {RealDevBench: Benchmarking Large Language Models for Real-World Application Development},
+  author = {Tang, Hao and Xie, Yupeng and Others},
+  booktitle = {Proceedings of the 2024 Conference on...},
+  year = {2024},
+  url = {https://arxiv.org/abs/...}
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>RealDevWorld</h2>
+                    <p>Real-world Development Capability Evaluation Platform</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#overview">Overview</a></li>
+                        <li><a href="index.html#leaderboard">Leaderboard</a></li>
+                        <li><a href="index.html#dataset">Dataset</a></li>
+                        <li><a href="index.html#casestudy">Case Studies</a></li>
+                        <li><a href="https://github.com/tanghaom/AppEvalPilot" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>For any questions or suggestions, please contact us</p>
+                    <a href="mailto:contact@realdev.world" class="btn-small">Send Email</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RealDevWorld. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Dataset page tab switching
+            const datasetTabButtons = document.querySelectorAll('.dataset-tabs .tab-button');
+            const datasetTabContents = document.querySelectorAll('.dataset-tabs .tab-content');
+            
+            datasetTabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const target = button.getAttribute('data-tab');
+                    
+                    // Remove all active states
+                    datasetTabButtons.forEach(btn => btn.classList.remove('active'));
+                    datasetTabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add current active state
+                    button.classList.add('active');
+                    document.getElementById(target).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

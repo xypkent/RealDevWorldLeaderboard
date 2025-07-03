@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealDevWorld Leaderboard</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title">
+                <i class="fas fa-rocket"></i>
+                RealDevWorld Leaderboard
+            </h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#overview" class="active">Overview</a></li>
+                    <li><a href="#dataset">Dataset</a></li>
+                    <li><a href="#research-analysis">Research</a></li>
+                    <li><a href="#leaderboard">Leaderboard</a></li>
+                    <li><a href="#agent-demo">Agent Demo</a></li>
+                    <li><a href="#casestudy">Case Studies</a></li>
+                    <li><a href="https://github.com/tanghaom/AppEvalPilot" target="_blank">GitHub <i class="fab fa-github"></i></a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i>
+                    <span>Latest Research in AI Development</span>
+                </div>
+                <h2>Real-World Development Capability Benchmark</h2>
+                <p>Evaluating AI Agents' Performance in Real-World Application Development Tasks with Comprehensive Multi-Dimensional Assessment</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">194</span>
+                        <span class="stat-label">Tasks</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">Categories</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">91.3%</span>
+                        <span class="stat-label">Correlation</span>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a href="#leaderboard" class="btn btn-primary">
+                        <i class="fas fa-trophy"></i>
+                        View Leaderboard
+                    </a>
+                    <a href="https://huggingface.co/datasets/stellaHsr-mm/RealDevBench" class="btn btn-secondary" target="_blank">
+                        <i class="fas fa-download"></i>
+                        Get Dataset
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" class="section overview">
+        <div class="container">
+            <h2 class="section-title">Project Overview</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Real-World Tasks</h3>
+                    <p>Based on actual application development needs, providing comprehensive evaluation of development capabilities</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Multi-Dimensional Evaluation</h3>
+                    <p>Assessing AI agent capabilities across design understanding, code implementation, debugging, and more</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Agent Evaluation</h3>
+                    <p>Specifically designed to assess AI agents' performance throughout the complete development process</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dataset" class="section dataset">
+        <div class="container">
+            <h2 class="section-title">Dataset</h2>
+            <div class="dataset-overview">
+                <div class="dataset-intro">
+                    <h3>RealDevBench</h3>
+                    <p class="dataset-description">A comprehensive real-world development task dataset containing various application development scenarios and task types. This benchmark evaluates AI agents' capabilities across multiple dimensions of software development.</p>
+                </div>
+                
+                <div class="dataset-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">194</div>
+                            <div class="stat-label">Development Tasks</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">4</div>
+                            <div class="stat-label">Task Categories</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Evaluation Dimensions</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">Open</div>
+                            <div class="stat-label">Source</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dataset-features">
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li><strong>Diverse Task Types:</strong> Display (50.0%), Data (14.4%), Analysis (18.6%), Game (17.0%)</li>
+                        <li><strong>Real-World Scenarios:</strong> Based on actual development requirements and challenges</li>
+                        <li><strong>Multi-Dimensional Evaluation:</strong> Design Understanding, Code Implementation, Debugging</li>
+                        <li><strong>Multimodal Complexity:</strong> Text, images, audio and tabular data integration</li>
+                        <li><strong>Open-Ended Tasks:</strong> Repository construction from scratch rather than predefined structures</li>
+                    </ul>
+                </div>
+                
+                <div class="dataset-actions">
+                    <a href="https://huggingface.co/datasets/stellaHsr-mm/RealDevBench" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Access on HuggingFace
+                    </a>
+                    <a href="#research-analysis" class="btn btn-secondary">
+                        <i class="fas fa-chart-line"></i> View Analysis
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="research-analysis" class="section research-analysis">
+        <div class="container">
+            <h2 class="section-title">Research Analysis & Visualization</h2>
+            <div class="research-tabs">
+                <button class="research-tab active" data-target="pipeline">Evaluation Pipeline</button>
+                <button class="research-tab" data-target="dataset-analysis">Dataset Analysis</button>
+                <button class="research-tab" data-target="performance-charts">Performance Charts</button>
+                <button class="research-tab" data-target="methodology">Methodology</button>
+            </div>
+            
+            <div class="research-content">
+                <div class="research-panel active" id="pipeline">
+                    <h3>Evaluation Pipeline Architecture</h3>
+                    <div class="chart-viewer">
+                        <img src="images/charts/pipeline-1.png" alt="Evaluation Pipeline Architecture" class="chart-image">
+                        <div class="chart-actions">
+                            <a href="../images/pipeline.pdf" target="_blank" class="btn btn-small">Download PDF</a>
+                        </div>
+                    </div>
+                    <p class="chart-description">Comprehensive flow architecture of the RealDevWorld evaluation system, including task assignment, agent execution, result evaluation and other key components.</p>
+                </div>
+                
+                <div class="research-panel" id="dataset-analysis">
+                    <h3>Dataset Case Analysis</h3>
+                    <div class="chart-viewer">
+                        <img src="images/charts/dataset_cases-1.png" alt="Dataset Case Analysis" class="chart-image">
+                        <div class="chart-actions">
+                            <a href="../images/dataset_cases.pdf" target="_blank" class="btn btn-small">Download PDF</a>
+                        </div>
+                    </div>
+                    <p class="chart-description">Detailed showcase of typical cases in the RealDevBench dataset, including task types, difficulty distribution, and evaluation criteria.</p>
+                </div>
+                
+                <div class="research-panel" id="performance-charts">
+                    <h3>Performance Analysis Charts</h3>
+                    <div class="chart-viewer">
+                        <img src="images/charts/analysis_charts-1.png" alt="Performance Analysis Charts" class="chart-image">
+                        <div class="chart-actions">
+                            <a href="../images/analysis_charts_new.pdf" target="_blank" class="btn btn-small">Download PDF</a>
+                        </div>
+                    </div>
+                    <p class="chart-description">Latest performance analysis charts showing comparative performance of different AI Agents across various evaluation dimensions.</p>
+                </div>
+                
+                <div class="research-panel" id="methodology">
+                    <h3>Research Methodology</h3>
+                    <div class="chart-viewer">
+                        <img src="images/charts/methodology-1.png" alt="Research Methodology" class="chart-image">
+                        <div class="chart-actions">
+                            <a href="../images/V9.pdf" target="_blank" class="btn btn-small">Download PDF</a>
+                        </div>
+                    </div>
+                    <p class="chart-description">Comprehensive research methodology documentation including evaluation framework design, metric definitions, and experimental setup.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leaderboard" class="section leaderboard">
+        <div class="container">
+            <h2 class="section-title">Leaderboard</h2>
+            <div class="leaderboard-tabs">
+                <button class="tab-button active" data-tab="overall">Overall Performance</button>
+                <button class="tab-button" data-tab="design">Design Understanding</button>
+                <button class="tab-button" data-tab="implementation">Code Implementation</button>
+                <button class="tab-button" data-tab="debug">Debugging Capability</button>
+            </div>
+            <div class="leaderboard-content">
+                <div class="tab-content active" id="overall">
+                    <table class="leaderboard-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Agent Name</th>
+                                <th>Model</th>
+                                <th>Organization</th>
+                                <th>Overall Score</th>
+                                <th>Submission Date</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="first-rank">
+                                <td>1</td>
+                                <td>AgentX</td>
+                                <td>GPT-4o</td>
+                                <td>OpenAI</td>
+                                <td>85.7</td>
+                                <td>2024-07-15</td>
+                                <td><a href="#" class="btn-small">View</a></td>
+                            </tr>
+                            <tr class="second-rank">
+                                <td>2</td>
+                                <td>DevAgent</td>
+                                <td>Claude 3.5</td>
+                                <td>Anthropic</td>
+                                <td>82.3</td>
+                                <td>2024-07-10</td>
+                                <td><a href="#" class="btn-small">View</a></td>
+                            </tr>
+                            <tr class="third-rank">
+                                <td>3</td>
+                                <td>CodeWizard</td>
+                                <td>Gemini 1.5 Pro</td>
+                                <td>Google</td>
+                                <td>79.5</td>
+                                <td>2024-07-05</td>
+                                <td><a href="#" class="btn-small">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>AppEvalPilot</td>
+                                <td>Mixtral 8x22B</td>
+                                <td>RealDevWorld Team</td>
+                                <td>75.2</td>
+                                <td>2024-06-30</td>
+                                <td><a href="#" class="btn-small">View</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-content" id="design">
+                    <!-- Design understanding leaderboard content -->
+                    <p>Design understanding leaderboard data loading...</p>
+                </div>
+                <div class="tab-content" id="implementation">
+                    <!-- Code implementation leaderboard content -->
+                    <p>Code implementation leaderboard data loading...</p>
+                </div>
+                <div class="tab-content" id="debug">
+                    <!-- Debugging capability leaderboard content -->
+                    <p>Debugging capability leaderboard data loading...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="agent-demo" class="section agent-demo">
+        <div class="container">
+            <h2 class="section-title">AppEvalPilot Demo</h2>
+            <p class="section-subtitle">Watch our automated evaluation agent in action</p>
+            
+            <div class="demo-video-section">
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <video class="demo-video-player" controls poster="images/charts/pipeline-1.png">
+                            <source src="videos/appevalpilot-demo.mp4" type="video/mp4">
+                            <div class="video-fallback">
+                                <i class="fas fa-play-circle"></i>
+                                <p>Your browser does not support the video tag.</p>
+                                <a href="videos/appevalpilot-demo.mp4" target="_blank" class="btn btn-small">Download Video</a>
+                            </div>
+                        </video>
+                        <div class="video-overlay">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-caption">
+                        <h3>AppEvalPilot Automated Testing Process</h3>
+                        <p>Real-time demonstration of intelligent software evaluation and testing automation</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="demo-features-section">
+                <h3 class="features-title">Key Capabilities</h3>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Intelligent Test Generation</h4>
+                            <p>Automatically generates comprehensive test cases from software requirements using domain knowledge and understanding</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-mouse-pointer"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>GUI Automation</h4>
+                            <p>Executes dynamic user interactions through real GUI operations and interface navigation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Real-time Verification</h4>
+                            <p>Performs live functional verification and validates software behavior against requirements</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Human-aligned Assessment</h4>
+                            <p>Provides accurate evaluations with 91.3% correlation to expert human judgments</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="demo-actions">
+                    <a href="https://github.com/tanghaom/AppEvalPilot" class="btn btn-primary" target="_blank">
+                        <i class="fab fa-github"></i> View Source Code
+                    </a>
+                    <a href="#research-analysis" class="btn btn-secondary">
+                        <i class="fas fa-chart-bar"></i> View Research Details
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="casestudy" class="section case-study">
+        <div class="container">
+            <h2 class="section-title">Case Studies</h2>
+            <div class="case-study-grid">
+                <div class="case-study-card">
+                    <img src="images/case1.jpg" alt="Case Study 1">
+                    <h3>Frontend Development Evaluation</h3>
+                    <p>Analysis of AI agents' performance in responsive design implementation</p>
+                    <a href="https://appevalpilot.realdev.world/" class="btn-small" target="_blank">View Details</a>
+                </div>
+                <div class="case-study-card">
+                    <img src="images/case2.jpg" alt="Case Study 2">
+                    <h3>API Integration Evaluation</h3>
+                    <p>Assessment of AI agents' ability to understand and implement API integrations</p>
+                    <a href="https://appevalpilot.realdev.world/" class="btn-small" target="_blank">View Details</a>
+                </div>
+                <div class="case-study-card">
+                    <img src="images/case3.jpg" alt="Case Study 3">
+                    <h3>Debugging & Problem Solving</h3>
+                    <p>Exploring AI agents' efficiency in code debugging and error correction</p>
+                    <a href="https://appevalpilot.realdev.world/" class="btn-small" target="_blank">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>RealDevWorld</h2>
+                    <p>Real-world Development Capability Evaluation Platform</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#leaderboard">Leaderboard</a></li>
+                        <li><a href="#dataset">Dataset</a></li>
+                        <li><a href="#casestudy">Case Studies</a></li>
+                        <li><a href="https://github.com/tanghaom/AppEvalPilot" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>For any questions or suggestions, please contact us</p>
+                    <a href="mailto:contact@realdev.world" class="btn-small">Send Email</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RealDevWorld. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 图片模态框 -->
+    <div id="imageModal" class="image-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeImageModal()">&times;</button>
+            <img src="" alt="" class="modal-image" id="modalImage">
+            <div class="modal-info" id="modalInfo">Click outside the image or press ESC to close</div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

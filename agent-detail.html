@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentX - RealDevWorld Leaderboard</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title">RealDevWorld Leaderboard</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#leaderboard">Leaderboard</a></li>
+                    <li><a href="index.html#dataset">Dataset</a></li>
+                    <li><a href="index.html#casestudy">Case Studies</a></li>
+                    <li><a href="https://github.com/tanghaom/AppEvalPilot" target="_blank">GitHub <i class="fab fa-github"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section agent-detail">
+        <div class="container">
+            <div class="agent-header">
+                <div class="agent-logo">
+                    <img src="images/agent-logo.png" alt="AgentX Logo">
+                </div>
+                <div class="agent-info">
+                    <h2>AgentX</h2>
+                    <div class="agent-meta">
+                        <span class="badge primary">Rank 1</span>
+                        <span class="badge secondary">GPT-4o</span>
+                        <span class="badge">OpenAI</span>
+                    </div>
+                    <p class="agent-description">
+                        AgentX is an AI agent developed by OpenAI based on GPT-4o, specifically designed to solve complex application development tasks. It can understand design requirements, implement high-quality code, and perform effective debugging, demonstrating excellent performance in RealDevBench tests.
+                    </p>
+                </div>
+            </div>
+
+            <div class="agent-stats">
+                <div class="stat-card">
+                    <h3>Overall Score</h3>
+                    <div class="stat-value">85.7</div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85.7%"></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <h3>Design Understanding</h3>
+                    <div class="stat-value">89.2</div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 89.2%"></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <h3>Code Implementation</h3>
+                    <div class="stat-value">91.3</div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 91.3%"></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <h3>Debugging Ability</h3>
+                    <div class="stat-value">88.5</div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 88.5%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="agent-tabs">
+                <div class="tab-header">
+                    <button class="tab-button active" data-tab="performance">Performance Analysis</button>
+                    <button class="tab-button" data-tab="examples">Example Cases</button>
+                    <button class="tab-button" data-tab="methodology">Evaluation Method</button>
+                </div>
+                <div class="tab-content active" id="performance">
+                    <h3>Performance Analysis</h3>
+                    
+                    <div class="performance-charts">
+                        <div class="chart">
+                            <h4>Performance by Domain</h4>
+                            <img src="images/chart1.jpg" alt="Performance by Domain Chart">
+                        </div>
+                        <div class="chart">
+                            <h4>Comparison with Other Agents</h4>
+                            <img src="images/chart2.jpg" alt="Comparison Chart">
+                        </div>
+                    </div>
+                    
+                    <h4>Strengths</h4>
+                    <ul class="advantage-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Excellent Code Generation</strong>
+                                <p>Able to generate high-quality code following best practices with low syntax error rates</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Strong Design Understanding</strong>
+                                <p>Can accurately interpret design requirements and translate them into actual code implementation</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Efficient Problem Diagnosis</strong>
+                                <p>Can quickly identify and resolve code issues, providing clear solutions</p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <h4>Areas for Improvement</h4>
+                    <ul class="improvement-list">
+                        <li>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <div>
+                                <strong>Complex Project Architecture</strong>
+                                <p>Room for improvement in overall architecture design for large-scale projects</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <div>
+                                <strong>Domain-Specific Knowledge</strong>
+                                <p>Knowledge in certain specific domains (like finance, healthcare) needs enhancement</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="examples">
+                    <h3>Example Cases</h3>
+                    
+                    <div class="example-case">
+                        <h4>E-commerce Frontend Development</h4>
+                        <div class="example-meta">
+                            <span class="badge">Frontend</span>
+                            <span class="badge">React</span>
+                            <span class="badge">Responsive Design</span>
+                        </div>
+                        <div class="example-description">
+                            <p>Task: Implement a responsive e-commerce product display page, including filtering, sorting, and shopping cart functionality.</p>
+                        </div>
+                        <div class="example-details">
+                            <div class="example-code">
+                                <h5>Implementation Code Snippet</h5>
+                                <pre><code>
+// Product list component
+const ProductList = ({ products, filters, sortBy }) => {
+  const filteredProducts = useMemo(() => {
+    return products
+      .filter(product => {
+        // Apply filtering logic
+        if (filters.category && product.category !== filters.category) return false;
+        if (filters.priceRange) {
+          const [min, max] = filters.priceRange;
+          if (product.price < min || product.price > max) return false;
+        }
+        return true;
+      })
+      .sort((a, b) => {
+        // Apply sorting logic
+        if (sortBy === 'price-low') return a.price - b.price;
+        if (sortBy === 'price-high') return b.price - a.price;
+        if (sortBy === 'rating') return b.rating - a.rating;
+        return 0;
+      });
+  }, [products, filters, sortBy]);
+
+  return (
+    <div className="product-grid">
+      {filteredProducts.map(product => (
+        <ProductCard key={product.id} product={product} />
+      ))}
+    </div>
+  );
+};
+                                </code></pre>
+                            </div>
+                            <div class="example-result">
+                                <h5>Implementation Result</h5>
+                                <img src="images/example1.jpg" alt="Implementation Result Screenshot">
+                            </div>
+                        </div>
+                        <div class="example-analysis">
+                            <h5>Analysis</h5>
+                            <p>AgentX performed excellently in this task, accurately understanding the requirements and implementing a high-performance product list component. The code uses React's useMemo to optimize rendering performance, has a clear functional component structure, and implements filtering and sorting logic correctly. The responsive layout handles different screen sizes well.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="example-case">
+                        <h4>API Integration & Data Processing</h4>
+                        <div class="example-meta">
+                            <span class="badge">Backend</span>
+                            <span class="badge">API Integration</span>
+                            <span class="badge">Node.js</span>
+                        </div>
+                        <p>More cases are being prepared...</p>
+                    </div>
+                </div>
+                <div class="tab-content" id="methodology">
+                    <h3>Evaluation Methodology</h3>
+                    
+                    <div class="methodology-content">
+                        <p>RealDevWorld employs a comprehensive multi-dimensional assessment approach to evaluate AI agents' performance in real-world development environments. The assessment includes but is not limited to:</p>
+                        
+                        <h4>Evaluation Dimensions</h4>
+                        <ul>
+                            <li><strong>Design Understanding</strong>: Evaluating the agent's ability to interpret design specifications, requirements documents, and user stories</li>
+                            <li><strong>Code Implementation</strong>: Assessing the correctness, readability, performance, and adherence to best practices of generated code</li>
+                            <li><strong>Debugging Ability</strong>: Evaluating the capacity to identify and fix issues, including error handling and edge cases</li>
+                            <li><strong>Project Organization</strong>: Assessing the reasonableness of code structure, modularity, and project architecture</li>
+                            <li><strong>Documentation Quality</strong>: Evaluating the completeness and clarity of generated documentation</li>
+                        </ul>
+                        
+                        <h4>Scoring Criteria</h4>
+                        <p>Each dimension is scored according to the following criteria:</p>
+                        <table class="methodology-table">
+                            <thead>
+                                <tr>
+                                    <th>Score</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>90-100</td>
+                                    <td>Excellent: Approaching or meeting professional developer level, requiring almost no human intervention</td>
+                                </tr>
+                                <tr>
+                                    <td>80-89</td>
+                                    <td>Very Good: High-quality implementation, may require minor adjustments</td>
+                                </tr>
+                                <tr>
+                                    <td>70-79</td>
+                                    <td>Good: Basic functionality implemented, but needs moderate improvements</td>
+                                </tr>
+                                <tr>
+                                    <td>60-69</td>
+                                    <td>Satisfactory: Barely implements basic functionality, but has obvious deficiencies</td>
+                                </tr>
+                                <tr>
+                                    <td><60</td>
+                                    <td>Unsatisfactory: Fails to implement core functionality or has serious issues</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <h4>Evaluation Process</h4>
+                        <ol>
+                            <li>Prepare test tasks covering different development domains and difficulty levels</li>
+                            <li>Provide the same background information, requirements, and constraints for each task</li>
+                            <li>Have AI agents complete tasks without human intervention</li>
+                            <li>Scoring by a professional assessment team, including senior developers and domain experts</li>
+                            <li>Compile scores across dimensions to calculate the final score</li>
+                        </ol>
+                        
+                        <p>For more detailed information about the evaluation methodology, please refer to the <a href="#">RealDevWorld Evaluation Methodology White Paper</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>RealDevWorld</h2>
+                    <p>Real-world Development Capability Evaluation Platform</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#overview">Overview</a></li>
+                        <li><a href="index.html#leaderboard">Leaderboard</a></li>
+                        <li><a href="index.html#dataset">Dataset</a></li>
+                        <li><a href="index.html#casestudy">Case Studies</a></li>
+                        <li><a href="https://github.com/tanghaom/AppEvalPilot" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>For any questions or suggestions, please contact us</p>
+                    <a href="mailto:contact@realdev.world" class="btn-small">Send Email</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RealDevWorld. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Detail page tab switching
+            const detailTabButtons = document.querySelectorAll('.agent-tabs .tab-button');
+            const detailTabContents = document.querySelectorAll('.agent-tabs .tab-content');
+            
+            detailTabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const target = button.getAttribute('data-tab');
+                    
+                    // Remove all active states
+                    detailTabButtons.forEach(btn => btn.classList.remove('active'));
+                    detailTabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add current active state
+                    button.classList.add('active');
+                    document.getElementById(target).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
