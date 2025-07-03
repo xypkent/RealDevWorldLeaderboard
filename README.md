@@ -149,12 +149,6 @@ RelDevWorldLeaderboard/
 
 本项目采用MIT许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
 
-## 📚 相关资源
-
-- **学术论文**: RealDevWorld: Benchmarking Production-Ready Software Engineering
-- **参考网站**: [OSWorld](https://osworld-grounding.github.io/), [SWE-bench](https://www.swebench.com/), [VisualWebBench](https://visualwebbench.github.io/)
-- **项目演示**: [CharXiv Leaderboard](https://charxiv.github.io/#leaderboard)
-
 ## 📧 联系方式
 
 如有问题或建议，请通过GitHub Issues联系我们。
