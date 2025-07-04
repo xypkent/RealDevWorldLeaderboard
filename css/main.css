@@ -2160,6 +2160,17 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* 任务分布饼图标签样式 */
+.pie-chart .pie-label {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+}
+
 .chart-legend {
     display: grid;
     grid-template-columns: 1fr 1fr;

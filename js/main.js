@@ -398,5 +398,43 @@ document.addEventListener('DOMContentLoaded', function() {
                 featureObserver.observe(item);
             });
         }
+
+        // ===== 任务分布饼图百分比标签 =====
+        const pieCharts = document.querySelectorAll('.pie-chart');
+        pieCharts.forEach(chart => {
+            const radius = chart.offsetWidth / 2;
+            const slices = chart.querySelectorAll('.pie-slice');
+
+            slices.forEach(slice => {
+                const start = parseFloat(slice.style.getPropertyValue('--start'));
+                const end = parseFloat(slice.style.getPropertyValue('--end'));
+                if (isNaN(start) || isNaN(end)) return;
+
+                // 动态计算标签距离中心的半径，扇形越大取值越小，保证文字位于扇形内部
+                const wedgeAngle = end - start;
+                const labelRadius = radius * (wedgeAngle > 120 ? 0.55 : (wedgeAngle > 60 ? 0.65 : 0.75));
+
+                // 计算刻度中点角度（以度为单位）
+                const mid = (start + end) / 2;
+                const angleRad = (mid - 90) * Math.PI / 180; // 将 0° 调整到顶部
+
+                // 计算标签位置
+                const x = radius + labelRadius * Math.cos(angleRad);
+                const y = radius + labelRadius * Math.sin(angleRad);
+
+                // 提取百分比文本
+                const match = slice.dataset.label ? slice.dataset.label.match(/\(([^)]+)\)/) : null;
+                if (!match) return;
+                const labelText = match[1];
+
+                // 创建并添加标签
+                const span = document.createElement('span');
+                span.className = 'pie-label';
+                span.textContent = labelText;
+                span.style.left = `${x}px`;
+                span.style.top = `${y}px`;
+                chart.appendChild(span);
+            });
+        });
     }
 }); 
