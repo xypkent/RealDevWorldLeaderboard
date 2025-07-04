@@ -100,7 +100,7 @@
         </div>
     </section>
 
-    <section id="dataset" class="section dataset">
+    <section id="dataset-old2" class="section dataset" style="display:none;">
         <div class="container">
             <h2 class="section-title">Dataset</h2>
             <div class="dataset-overview">
@@ -173,7 +173,7 @@
                     <a href="https://huggingface.co/datasets/stellaHsr-mm/RealDevBench" class="btn btn-primary" target="_blank">
                         <i class="fas fa-external-link-alt"></i> Access on HuggingFace
                     </a>
-                    <a href="#research-analysis" class="btn btn-secondary">
+                    <a href="#" class="btn btn-secondary research-tab" data-target="dataset-analysis">
                         <i class="fas fa-chart-line"></i> View Analysis
                     </a>
                 </div>
@@ -181,18 +181,92 @@
         </div>
     </section>
 
-    <section id="research-analysis" class="section research-analysis">
+    <section id="dataset" class="section dataset research-analysis">
         <div class="container">
-            <h2 class="section-title">Research Analysis & Visualization</h2>
+            <h2 class="section-title">Dataset & Research</h2>
             <div class="research-tabs">
-                <button class="research-tab active" data-target="pipeline">Evaluation Pipeline</button>
+                <button class="research-tab active" data-target="dataset-overview">Dataset Overview</button>
+                <button class="research-tab" data-target="pipeline">Evaluation Pipeline</button>
                 <button class="research-tab" data-target="dataset-analysis">Dataset Analysis</button>
                 <button class="research-tab" data-target="performance-charts">Performance Charts</button>
                 <button class="research-tab" data-target="methodology">Methodology</button>
             </div>
             
             <div class="research-content">
-                <div class="research-panel active" id="pipeline">
+                <div class="research-panel active" id="dataset-overview">
+                    <div class="dataset-overview">
+                        <div class="dataset-intro">
+                            <h3>RealDevBench</h3>
+                            <p class="dataset-description">A comprehensive real-world development task dataset containing various application development scenarios and task types. This benchmark evaluates AI agents' capabilities across multiple dimensions of software development.</p>
+                        </div>
+                        <div class="dataset-stats">
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-tasks"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="stat-number">194</div>
+                                    <div class="stat-label">Development Tasks</div>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="stat-number">4</div>
+                                    <div class="stat-label">Task Categories</div>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-download"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="stat-number">Open</div>
+                                    <div class="stat-label">Source</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dataset-features">
+                            <h4>Key Features</h4>
+                            <div class="features-content">
+                                <div class="features-list">
+                                    <ul>
+                                        <li><strong>Real-World Scenarios:</strong> Based on actual development requirements and challenges</li>
+                                        <li><strong>Multi-Dimensional Evaluation:</strong> Requirement Understanding, Code Implementation, Debugging</li>
+                                        <li><strong>Multimodal Complexity:</strong> Text, images, audio and tabular data integration</li>
+                                        <li><strong>Open-Ended Tasks:</strong> Repository construction from scratch</li>
+                                    </ul>
+                                </div>
+                                <div class="task-distribution">
+                                    <h5>Task Type Distribution</h5>
+                                    <div class="pie-chart">
+                                        <div class="pie-slice slice-display" style="--start: 0; --end: 180;" data-label="Display (50.0%)"></div>
+                                        <div class="pie-slice slice-analysis" style="--start: 180; --end: 247;" data-label="Analysis (18.6%)"></div>
+                                        <div class="pie-slice slice-game" style="--start: 247; --end: 308;" data-label="Game (17.0%)"></div>
+                                        <div class="pie-slice slice-data" style="--start: 308; --end: 360;" data-label="Data (14.4%)"></div>
+                                    </div>
+                                    <div class="chart-legend">
+                                        <div class="legend-item"><span class="legend-color display"></span>Display (50.0%)</div>
+                                        <div class="legend-item"><span class="legend-color analysis"></span>Analysis (18.6%)</div>
+                                        <div class="legend-item"><span class="legend-color game"></span>Game (17.0%)</div>
+                                        <div class="legend-item"><span class="legend-color data"></span>Data (14.4%)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dataset-actions">
+                            <a href="https://huggingface.co/datasets/stellaHsr-mm/RealDevBench" class="btn btn-primary" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Access on HuggingFace
+                            </a>
+                            <a href="#" class="btn btn-secondary research-tab" data-target="dataset-analysis">
+                                <i class="fas fa-chart-line"></i> View Analysis
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="research-panel" id="pipeline">
                     <h3>Evaluation Pipeline Architecture</h3>
                     <div class="chart-viewer">
                         <img src="images/charts/pipeline-1.png" alt="Evaluation Pipeline Architecture" class="chart-image">
