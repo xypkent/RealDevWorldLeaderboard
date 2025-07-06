@@ -73,36 +73,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load actual leaderboard data (can be extended to fetch from API)
     function loadLeaderboardData() {
         // Here you can use the fetch API to get actual data from the backend
-        // Demo mock data
-        const designData = [
-            { rank: 1, name: 'DesignMaster', model: 'GPT-4o', org: 'OpenAI', score: 89.2, date: '2024-07-15' },
-            { rank: 2, name: 'UIWizard', model: 'Claude 3.5', org: 'Anthropic', score: 86.5, date: '2024-07-12' },
-            { rank: 3, name: 'VisualDev', model: 'Gemini 1.5 Pro', org: 'Google', score: 82.8, date: '2024-07-08' },
-            { rank: 4, name: 'LayoutPro', model: 'Llama 3', org: 'Meta', score: 78.4, date: '2024-07-01' }
+        // Demo mock data for new categories
+
+        const productsData = [
+            { rank: 1, name: 'AgentX', model: 'GPT-4o', org: 'OpenAI', score: 85.7, date: '2024-07-15' },
+            { rank: 2, name: 'DevAgent', model: 'Claude 3.5', org: 'Anthropic', score: 82.3, date: '2024-07-10' },
+            { rank: 3, name: 'Bolt', model: 'Gemini 1.5 Pro', org: 'Google', score: 79.6, date: '2024-07-08' },
+            { rank: 4, name: 'Lovable', model: 'Mixtral 8x22B', org: 'Meta', score: 77.4, date: '2024-07-05' }
         ];
-        
-        const implementationData = [
-            { rank: 1, name: 'CodeCrafter', model: 'GPT-4o', org: 'OpenAI', score: 91.3, date: '2024-07-14' },
-            { rank: 2, name: 'DevGenius', model: 'Claude 3.5', org: 'Anthropic', score: 87.9, date: '2024-07-11' },
-            { rank: 3, name: 'BuildMaster', model: 'Gemini 1.5 Pro', org: 'Google', score: 83.6, date: '2024-07-07' },
-            { rank: 4, name: 'CodeWizard', model: 'Llama 3', org: 'Meta', score: 79.2, date: '2024-07-02' }
+
+        const openSourceData = [
+            { rank: 1, name: 'CodeWizard', model: 'Gemini 1.5 Pro', org: 'Google', score: 79.5, date: '2024-07-05' },
+            { rank: 2, name: 'AppEvalPilot', model: 'Mixtral 8x22B', org: 'RealDevWorld Team', score: 75.2, date: '2024-06-30' },
+            { rank: 3, name: 'GPT-Pilot', model: 'GPT-4o', org: 'OpenAI', score: 74.1, date: '2024-06-21' },
+            { rank: 4, name: 'DeepSeekDev', model: 'DeepSeek-v3', org: 'DeepSeek', score: 71.3, date: '2024-06-18' }
         ];
-        
-        const debugData = [
-            { rank: 1, name: 'BugHunter', model: 'GPT-4o', org: 'OpenAI', score: 88.5, date: '2024-07-13' },
-            { rank: 2, name: 'ErrorFixer', model: 'Claude 3.5', org: 'Anthropic', score: 84.2, date: '2024-07-09' },
-            { rank: 3, name: 'TestMaster', model: 'Gemini 1.5 Pro', org: 'Google', score: 80.7, date: '2024-07-06' },
-            { rank: 4, name: 'DebugPro', model: 'Llama 3', org: 'Meta', score: 76.9, date: '2024-07-03' }
-        ];
-        
-        // Fill design understanding leaderboard
-        renderLeaderboard('design', designData);
-        
-        // Fill code implementation leaderboard
-        renderLeaderboard('implementation', implementationData);
-        
-        // Fill debugging capability leaderboard
-        renderLeaderboard('debug', debugData);
+
+        // Fill new leaderboards
+        renderLeaderboard('products', productsData);
+        renderLeaderboard('opensource', openSourceData);
     }
     
     function renderLeaderboard(tabId, data) {

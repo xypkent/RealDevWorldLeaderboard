@@ -183,7 +183,7 @@
 
     <section id="dataset" class="section dataset research-analysis">
         <div class="container">
-            <h2 class="section-title">Dataset & Research</h2>
+            <h2 class="section-title">Dataset & Evaluation</h2>
             <div class="research-tabs">
                 <button class="research-tab active" data-target="dataset-overview">Dataset Overview</button>
                 <button class="research-tab" data-target="dataset-analysis">Dataset Case</button>
@@ -308,11 +308,15 @@
     <section id="leaderboard" class="section leaderboard">
         <div class="container">
             <h2 class="section-title">Leaderboard</h2>
+            <!-- Submission guideline text -->
+            <div class="submit-info">
+                If you would like to submit your system or model to any of our leaderboards (Products, Open-source &amp; LLM, or Overall), please follow the instructions provided in our <a href="https://github.com/xypkent/RealDevWorldLeaderboard#submit" target="_blank">submission guide</a>.
+            </div>
+
             <div class="leaderboard-tabs">
-                <button class="tab-button active" data-tab="overall">Overall Performance</button>
-                <button class="tab-button" data-tab="design">Requirement Understanding</button>
-                <button class="tab-button" data-tab="implementation">Code Implementation</button>
-                <button class="tab-button" data-tab="debug">Debugging Capability</button>
+                <button class="tab-button active" data-tab="overall">Overall</button>
+                <button class="tab-button" data-tab="products">Products</button>
+                <button class="tab-button" data-tab="opensource">Open-source &amp; LLM</button>
             </div>
             <div class="leaderboard-content">
                 <div class="tab-content active" id="overall">
@@ -368,17 +372,13 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="tab-content" id="design">
-                    <!-- Requirement understanding leaderboard content -->
-                    <p>Requirement understanding leaderboard data loading...</p>
+                <div class="tab-content" id="products">
+                    <!-- Commercial products leaderboard content -->
+                    <p>Products leaderboard data loading...</p>
                 </div>
-                <div class="tab-content" id="implementation">
-                    <!-- Code implementation leaderboard content -->
-                    <p>Code implementation leaderboard data loading...</p>
-                </div>
-                <div class="tab-content" id="debug">
-                    <!-- Debugging capability leaderboard content -->
-                    <p>Debugging capability leaderboard data loading...</p>
+                <div class="tab-content" id="opensource">
+                    <!-- Open-source & LLM leaderboard content -->
+                    <p>Open-source leaderboard data loading...</p>
                 </div>
             </div>
         </div>
