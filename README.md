@@ -1,158 +1,142 @@
 # RealDevWorld Leaderboard
 
-一个基于学术论文《RealDevWorld: Benchmarking Production-Ready Software Engineering》的AI代理软件开发能力评估排行榜平台。
+A lightweight static website for showcasing AI agent performance on real-world software development tasks. The site is built around the **RealDevBench** dataset published in the paper *“RealDevWorld: Benchmarking Production-Ready Software Engineering”* and provides a comprehensive leaderboard, dataset overview, research insights and interactive demos.
 
 [![Website](https://img.shields.io/badge/Website-Live-brightgreen)](https://your-github-username.github.io/RealDevWorld-Leaderboard)
 [![Dataset](https://img.shields.io/badge/Dataset-HuggingFace-yellow)](https://huggingface.co/datasets/stellaHsr-mm/RealDevBench)
 [![Agent](https://img.shields.io/badge/Agent-AppEvalPilot-blue)](https://github.com/tanghaom/AppEvalPilot)
 
-## 📖 项目概述
+## 📖 Overview
 
-RealDevWorld Leaderboard是一个专门用于展示和比较AI代理在真实世界软件开发任务中表现的综合性平台。该平台基于RealDevBench数据集，提供多维度的AI代理能力评估，包括设计理解、代码实现、调试能力等核心开发技能。
+**RealDevWorld Leaderboard** is a fully client-side web application designed to compare and visualise the capabilities of AI coding agents across multi-stage software engineering tasks. It aggregates evaluation results from **RealDevBench**, highlights key metrics such as requirement understanding, code implementation and debugging ability, and offers rich visual analytics for further research.
 
-## ✨ 主要功能
+## ✨ Key Features
 
-- **🏆 动态排行榜**: 多维度AI代理性能比较，支持实时筛选和排序
-- **📊 数据可视化**: 详细的性能分析图表和统计数据展示
-- **🎯 数据集信息**: RealDevBench数据集的完整介绍和使用指南
-- **🔬 研究分析**: 评估方法论、流程图和研究结果展示
-- **🎥 Agent演示**: AppEvalPilot运行演示视频和功能特性介绍
-- **📱 响应式设计**: 完美适配桌面端和移动端设备
+- **🏆 Dynamic Leaderboard** – sortable, filterable ranking of agents across multiple metrics
+- **📊 Data Visualisation** – pie charts, bar graphs and tables for in-depth performance inspection
+- **🗂 Dataset Overview** – concise introduction to RealDevBench, split by categories & statistics
+- **🔬 Research Insights** – methodology diagrams, evaluation pipeline and experimental results
+- **🎥 Agent Demo** – embedded video demonstrating the reference agent *AppEvalPilot* in action
+- **📱 Responsive Design** – works seamlessly on desktop and mobile devices
 
-## 🛠️ 技术栈
+## 🛠 Tech Stack
 
-- **前端**: HTML5, CSS3, JavaScript (ES6+)
-- **样式**: 现代CSS特性（Grid, Flexbox, 渐变, 动画）
-- **媒体**: HTML5视频播放器，图表可视化
-- **设计**: 响应式布局，毛玻璃效果，现代UI/UX
+- **Frontend** – HTML5, CSS3, vanilla JavaScript (ES6+)
+- **Styling** – modern CSS features (Flexbox, Grid, gradients, animations, glassmorphism)
+- **Media** – HTML5 `<video>` player, lightweight SVG/PNG charts
+- **Design** – fully responsive layout with focus on clean, modern UI/UX
 
-## 📁 项目结构
+## 📁 Project Structure
 
-```
+```text
 RelDevWorldLeaderboard/
-├── index.html              # 主页面
-├── dataset.html             # 数据集页面
-├── agent-detail.html        # 代理详情页面
+├── index.html               # Landing page (overview, leaderboard, demos, case studies)
+├── dataset.html             # Dedicated dataset & research page (optional, may be merged)
+├── agent-detail.html        # Detailed page for a single agent
 ├── css/
-│   └── main.css            # 主样式文件
+│   └── main.css             # Global stylesheet
 ├── js/
-│   └── main.js             # 主JavaScript文件
-├── images/
-│   └── charts/             # 图表和分析图片
-├── videos/
-│   └── appevalpilot-demo.mp4  # 演示视频
-└── README.md               # 项目说明
+│   └── main.js              # Interactive behaviour & mock data
+├── images/                  # Charts, icons and illustrations
+├── videos/                  # Demo video assets
+└── README.md                # Project documentation (this file)
 ```
 
-## 🚀 本地开发
+## 🚀 Local Development
 
-### 快速开始
+### Quick Start
 
-1. **克隆仓库**
+1. **Clone the repository**
    ```bash
    git clone https://github.com/your-username/RealDevWorld-Leaderboard.git
    cd RealDevWorld-Leaderboard
    ```
-
-2. **启动本地服务器**
+2. **Launch a local static server**
    
-   使用Python (推荐):
+   Using Python (recommended):
    ```bash
    # Python 3
    python -m http.server 8000
-   
    # Python 2
    python -m SimpleHTTPServer 8000
    ```
-   
-   或使用Node.js:
+
+   Using Node.js:
    ```bash
    npx serve .
    ```
-   
-   或使用Live Server (VS Code扩展)
 
-3. **访问网站**
-   
-   打开浏览器访问：`http://localhost:8000`
+   Via **Live Server** (VS Code extension) is also fine.
+3. **Open your browser** at `http://localhost:8000`.
 
-### 开发说明
+### Development Notes
 
-- 这是一个纯静态网站，无需构建过程
-- 所有样式在 `css/main.css` 中
-- 所有JavaScript交互在 `js/main.js` 中
-- 图片资源放置在 `images/` 目录
-- 视频文件放置在 `videos/` 目录
+- The site is 100 % static – no build step is required.
+- All styles live in `css/main.css`.
+- All JavaScript logic is in `js/main.js` (currently using mock data; hook it up to real APIs if desired).
+- Image assets reside under `images/`; video files under `videos/`.
 
-## 📊 数据集信息
+## 📊 Dataset – RealDevBench
 
-- **RealDevBench**: 包含194个真实世界软件开发任务
-- **任务类别**: 4个主要分类维度
-- **评估指标**: 多维度综合评估体系
-- **数据源**: [Hugging Face数据集](https://huggingface.co/datasets/stellaHsr-mm/RealDevBench)
+- **194** real-world, production-level development tasks
+- **4** major categories covering diverse engineering scenarios
+- **Multi-dimensional** scoring: design understanding, implementation quality, debugging efficacy and more
+- Available on [Hugging Face](https://huggingface.co/datasets/stellaHsr-mm/RealDevBench)
 
-## 🤖 AI代理
+## 🤖 Reference Agent – AppEvalPilot
 
-- **AppEvalPilot**: 参考AI代理实现
-- **源代码**: [GitHub仓库](https://github.com/tanghaom/AppEvalPilot)
-- **演示案例**: [在线演示](https://appevalpilot.realdev.world/)
+- Open-source evaluation agent used as a baseline
+- Source code: <https://github.com/tanghaom/AppEvalPilot>
+- Live demo: <https://appevalpilot.realdev.world/>
 
-## 🌐 部署
+## 🌐 Deployment
 
-### GitHub Pages部署
+### GitHub Pages
 
-1. **推送代码到GitHub**
+1. Push your code to GitHub:  
    ```bash
    git add .
-   git commit -m "Initial commit"
+   git commit -m "Deploy website"
    git push origin main
    ```
-
-2. **启用GitHub Pages**
-   - 进入仓库Settings
-   - 找到Pages部分
-   - 选择Source为"Deploy from a branch"
-   - 选择branch为"main"，folder为"/ (root)"
-   - 保存设置
-
-3. **访问网站**
-   
-   网站将在几分钟后可通过以下地址访问：
+2. In **Repository → Settings → Pages**, choose:
+   - **Source**: *Deploy from a branch*
+   - **Branch**: `main` – **Folder**: `/ (root)`
+3. Wait a minute, then visit:  
    `https://your-username.github.io/RealDevWorld-Leaderboard`
 
-### 其他部署选项
+### Alternative Hosting
 
-- **Netlify**: 拖拽项目文件夹到Netlify dashboard
-- **Vercel**: 连接GitHub仓库进行自动部署
-- **传统主机**: 上传所有文件到web服务器根目录
+- **Netlify** – drag & drop the folder or connect your Git repo
+- **Vercel** – import the repo and deploy automatically
+- **Traditional hosting** – upload all files to your web server’s document root
 
-## 🎨 页面结构
+## 🎨 Page Sections
 
-1. **概述 (Overview)**: 项目介绍和核心亮点
-2. **数据集 (Dataset)**: RealDevBench详细信息
-3. **研究分析 (Research)**: 方法论和评估结果
-4. **排行榜 (Leaderboard)**: AI代理性能比较
-5. **代理演示 (Agent Demo)**: AppEvalPilot功能展示
-6. **案例研究 (Case Studies)**: 详细分析案例
+1. **Overview** – project intro & key highlights
+2. **Dataset & Research** – RealDevBench details and analysis
+3. **Leaderboard** – live ranking of agents
+4. **Agent Demo** – video presentation of AppEvalPilot
+5. **Case Studies** – qualitative deep dives into selected tasks
 
-## 🤝 贡献指南
+## 🤝 Contributing
 
-欢迎为项目贡献代码或提出改进建议！
+Contributions are welcome! Feel free to open issues or submit pull requests.
 
-1. Fork本仓库
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 创建Pull Request
+1. Fork the repo
+2. Create a feature branch: `git checkout -b feature/my-awesome-feature`
+3. Commit your changes: `git commit -m "Add awesome feature"`
+4. Push to GitHub: `git push origin feature/my-awesome-feature`
+5. Open a pull request and describe your change
 
-## 📄 许可证
+## 📄 License
 
-本项目采用MIT许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
 
-## 📧 联系方式
+## 📧 Contact
 
-如有问题或建议，请通过GitHub Issues联系我们。
+For questions or suggestions, please open an issue on GitHub.
 
 ---
 
-⭐ 如果这个项目对您有帮助，请给我们一个star！ 
+⭐ If you find this project useful, please give it a star – it helps a lot! 
