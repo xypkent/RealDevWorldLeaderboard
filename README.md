@@ -1,6 +1,6 @@
 # RealDevWorld Leaderboard
 
-A lightweight static website for showcasing AI agent performance on real-world software development tasks. The site is built around the **RealDevBench** dataset published in the paper *“RealDevWorld: Benchmarking Production-Ready Software Engineering”* and provides a comprehensive leaderboard, dataset overview, research insights and interactive demos.
+A lightweight static website for showcasing AI agent performance on real-world software development tasks. The site is built around the **RealDevBench** dataset published in the paper *"You Don't Know Until You Click: Automated GUI Testing for Production-Ready Software Evaluation"* and provides a comprehensive leaderboard, dataset overview, research insights and interactive demos.
 
 [![Website](https://img.shields.io/badge/Website-Live-brightgreen)](https://your-github-username.github.io/RealDevWorld-Leaderboard)
 [![Dataset](https://img.shields.io/badge/Dataset-HuggingFace-yellow)](https://huggingface.co/datasets/stellaHsr-mm/RealDevBench)
@@ -81,11 +81,15 @@ RelDevWorldLeaderboard/
 - **194** real-world, production-level development tasks
 - **4** major categories covering diverse engineering scenarios
 - **Multi-dimensional** scoring: design understanding, implementation quality, debugging efficacy and more
+- **92% accuracy** and **85% correlation** with human expert evaluations
 - Available on [Hugging Face](https://huggingface.co/datasets/stellaHsr-mm/RealDevBench)
 
 ## 🤖 Reference Agent – AppEvalPilot
 
 - Open-source evaluation agent used as a baseline
+- **92% accuracy** and **85% correlation** with human expert evaluations
+- **47% improvement** over existing GUI testing approaches
+- **33% reduction** in evaluation time compared to traditional methods
 - Source code: <https://github.com/tanghaom/AppEvalPilot>
 - Live demo: <https://appevalpilot.realdev.world/>
 

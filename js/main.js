@@ -76,17 +76,19 @@ document.addEventListener('DOMContentLoaded', function() {
         // Demo mock data for new categories
 
         const productsData = [
-            { rank: 1, name: 'AgentX', model: 'GPT-4o', org: 'OpenAI', score: 85.7, date: '2024-07-15' },
-            { rank: 2, name: 'DevAgent', model: 'Claude 3.5', org: 'Anthropic', score: 82.3, date: '2024-07-10' },
-            { rank: 3, name: 'Bolt', model: 'Gemini 1.5 Pro', org: 'Google', score: 79.6, date: '2024-07-08' },
-            { rank: 4, name: 'Lovable', model: 'Mixtral 8x22B', org: 'Meta', score: 77.4, date: '2024-07-05' }
+            { rank: 1, name: 'MGX (BoN-3)', model: 'MGX Framework', org: 'MGX Team', score: 78, date: '2025-01-15' },
+            { rank: 2, name: 'Lovable', model: 'Lovable Framework', org: 'Lovable Team', score: 74, date: '2025-01-10' },
+            { rank: 3, name: 'MGX', model: 'MGX Framework', org: 'MGX Team', score: 60, date: '2025-01-05' },
+            { rank: 4, name: 'Bolt', model: 'Bolt Framework', org: 'StackBlitz', score: 54, date: '2025-01-01' },
+            { rank: 5, name: 'OpenHands', model: 'OpenHands Framework', org: 'OpenHands Team', score: 50, date: '2024-12-28' }
         ];
 
         const openSourceData = [
-            { rank: 1, name: 'CodeWizard', model: 'Gemini 1.5 Pro', org: 'Google', score: 79.5, date: '2024-07-05' },
-            { rank: 2, name: 'AppEvalPilot', model: 'Mixtral 8x22B', org: 'RealDevWorld Team', score: 75.2, date: '2024-06-30' },
-            { rank: 3, name: 'GPT-Pilot', model: 'GPT-4o', org: 'OpenAI', score: 74.1, date: '2024-06-21' },
-            { rank: 4, name: 'DeepSeekDev', model: 'DeepSeek-v3', org: 'DeepSeek', score: 71.3, date: '2024-06-18' }
+            { rank: 1, name: 'Qwen3-Coder-480B', model: 'Qwen3-Coder-480B', org: 'Alibaba', score: 53, date: '2024-12-25' },
+            { rank: 2, name: 'Kimi-K2', model: 'Kimi-K2', org: 'Moonshot AI', score: 39, date: '2024-12-20' },
+            { rank: 3, name: 'Claude-3.7-Sonnet', model: 'Claude-3.7-Sonnet', org: 'Anthropic', score: 31, date: '2025-01-15' },
+            { rank: 4, name: 'Gemini-2.5-Pro', model: 'Gemini-2.5-Pro', org: 'Google', score: 29, date: '2025-01-10' },
+            { rank: 5, name: 'DeepSeek-V3', model: 'DeepSeek-V3', org: 'DeepSeek', score: 29, date: '2025-01-05' }
         ];
 
         // Fill new leaderboards
