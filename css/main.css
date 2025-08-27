@@ -459,7 +459,7 @@ h1, h2, h3, h4, h5, h6 {
 .leaderboard-table th,
 .leaderboard-table td {
     padding: 15px;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -1745,9 +1745,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .chart-image {
-    width: 100%;
+    width: 70%;
     height: auto;
     display: block;
+    margin: 0 auto;
     transition: transform 0.3s ease;
     cursor: zoom-in;
 }
@@ -2133,7 +2134,7 @@ h1, h2, h3, h4, h5, h6 {
     /* 调整列宽比例: 左侧列表稍宽 */
     grid-template-columns: 1.5fr 1fr;
     gap: 30px;
-    align-items: start;
+    align-items: center;
 }
 
 .features-list ul {
