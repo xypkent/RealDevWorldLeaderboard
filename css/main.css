@@ -463,6 +463,19 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 1px solid var(--border-color);
 }
 
+/* 组织链接样式 */
+.leaderboard-table td a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.leaderboard-table td a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
 .leaderboard-table th {
     background-color: var(--primary-color);
     color: white;
@@ -2439,5 +2452,104 @@ h1, h2, h3, h4, h5, h6 {
     
     .result-stats .stat-number {
         font-size: 1.5rem;
+    }
+}
+
+/* ====== Performance Table Styles ====== */
+.performance-table-section {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 30px;
+    box-shadow: var(--shadow);
+    margin-top: 30px;
+}
+
+.performance-table-section h4 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+.performance-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+}
+
+.performance-table th,
+.performance-table td {
+    padding: 12px 8px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+}
+
+.performance-table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.performance-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.performance-table tbody tr:hover {
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.performance-table .human-row {
+    background-color: #e8f4fd;
+    font-weight: 600;
+}
+
+.performance-table .category-row {
+    background-color: #f1f3f4;
+    font-style: italic;
+    color: var(--light-text);
+}
+
+.performance-table .highlight-row {
+    background-color: #e8f5e8;
+    font-weight: 600;
+    color: var(--success-color);
+}
+
+.performance-table .highlight-row td {
+    border-color: var(--success-color);
+}
+
+.table-caption {
+    font-size: 0.9rem;
+    color: var(--light-text);
+    text-align: center;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .performance-table {
+        font-size: 0.75rem;
+    }
+    
+    .performance-table th,
+    .performance-table td {
+        padding: 8px 4px;
+    }
+    
+    .performance-table-section {
+        padding: 20px 15px;
     }
 } 

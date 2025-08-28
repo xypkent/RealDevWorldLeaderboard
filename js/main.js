@@ -76,19 +76,19 @@ document.addEventListener('DOMContentLoaded', function() {
         // Demo mock data for new categories
 
         const productsData = [
-            { rank: 1, name: 'MGX (BoN-3)', model: 'MGX Framework', org: 'MGX Team', score: 78, date: '2025-01-15' },
-            { rank: 2, name: 'Lovable', model: 'Lovable Framework', org: 'Lovable Team', score: 74, date: '2025-01-10' },
-            { rank: 3, name: 'MGX', model: 'MGX Framework', org: 'MGX Team', score: 60, date: '2025-01-05' },
-            { rank: 4, name: 'Bolt', model: 'Bolt Framework', org: 'StackBlitz', score: 54, date: '2025-01-01' },
-            { rank: 5, name: 'OpenHands', model: 'OpenHands Framework', org: 'OpenHands Team', score: 50, date: '2024-12-28' }
+            { rank: 1, name: 'MGX (BoN-3)', model: 'MGX Framework', org: 'MGX Team', orgUrl: 'https://mgx.ai', agentQuality: 0.78, codeQuality: 0.72, visualQuality: 0.41 },
+            { rank: 2, name: 'Lovable', model: 'Lovable Framework', org: 'Lovable Team', orgUrl: 'https://lovable.dev', agentQuality: 0.74, codeQuality: 0.58, visualQuality: 0.47 },
+            { rank: 3, name: 'MGX', model: 'MGX Framework', org: 'MGX Team', orgUrl: 'https://mgx.ai', agentQuality: 0.60, codeQuality: 0.68, visualQuality: 0.41 },
+            { rank: 4, name: 'Bolt', model: 'Bolt Framework', org: 'StackBlitz', orgUrl: 'https://bolt.new', agentQuality: 0.54, codeQuality: 0.69, visualQuality: 0.50 }
         ];
 
         const openSourceData = [
-            { rank: 1, name: 'Qwen3-Coder-480B', model: 'Qwen3-Coder-480B', org: 'Alibaba', score: 53, date: '2024-12-25' },
-            { rank: 2, name: 'Kimi-K2', model: 'Kimi-K2', org: 'Moonshot AI', score: 39, date: '2024-12-20' },
-            { rank: 3, name: 'Claude-3.7-Sonnet', model: 'Claude-3.7-Sonnet', org: 'Anthropic', score: 31, date: '2025-01-15' },
-            { rank: 4, name: 'Gemini-2.5-Pro', model: 'Gemini-2.5-Pro', org: 'Google', score: 29, date: '2025-01-10' },
-            { rank: 5, name: 'DeepSeek-V3', model: 'DeepSeek-V3', org: 'DeepSeek', score: 29, date: '2025-01-05' }
+            { rank: 1, name: 'Qwen3-Coder-480B', model: 'Qwen3-Coder-480B', org: 'Alibaba', orgUrl: 'https://github.com/QwenLM/Qwen2.5-Coder', agentQuality: 0.53, codeQuality: 0.41, visualQuality: 0.32 },
+            { rank: 2, name: 'OpenHands', model: 'OpenHands Framework', org: 'OpenHands Team', orgUrl: 'https://github.com/All-Hands-AI/OpenHands', agentQuality: 0.50, codeQuality: 0.38, visualQuality: 0.33 },
+            { rank: 3, name: 'Kimi-K2', model: 'Kimi-K2', org: 'Moonshot AI', orgUrl: 'https://kimi.moonshot.cn', agentQuality: 0.39, codeQuality: 0.41, visualQuality: 0.29 },
+            { rank: 4, name: 'Claude-3.7-Sonnet', model: 'Claude-3.7-Sonnet', org: 'Anthropic', orgUrl: 'https://claude.ai', agentQuality: 0.31, codeQuality: 0.41, visualQuality: 0.18 },
+            { rank: 5, name: 'Gemini-2.5-Pro', model: 'Gemini-2.5-Pro', org: 'Google', orgUrl: 'https://gemini.google.com', agentQuality: 0.29, codeQuality: 0.45, visualQuality: 0.26 },
+            { rank: 6, name: 'DeepSeek-V3', model: 'DeepSeek-V3', org: 'DeepSeek', orgUrl: 'https://github.com/deepseek-ai/DeepSeek-V3', agentQuality: 0.29, codeQuality: 0.18, visualQuality: 0.21 }
         ];
 
         // Fill new leaderboards
@@ -108,9 +108,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     <th>Agent Name</th>
                     <th>Model</th>
                     <th>Organization</th>
-                    <th>Score</th>
-                    <th>Submission Date</th>
-                    <th>Details</th>
+                    <th>Agent Quality</th>
+                    <th>Code Quality</th>
+                    <th>Visual Quality</th>
                 </tr>
             </thead>
             <tbody>
@@ -122,15 +122,17 @@ document.addEventListener('DOMContentLoaded', function() {
             else if (item.rank === 2) rowClass = 'second-rank';
             else if (item.rank === 3) rowClass = 'third-rank';
             
+            const orgLink = item.orgUrl ? `<a href="${item.orgUrl}" target="_blank" rel="noopener">${item.org}</a>` : item.org;
+            
             tableHTML += `
             <tr class="${rowClass}">
                 <td>${item.rank}</td>
                 <td>${item.name}</td>
                 <td>${item.model}</td>
-                <td>${item.org}</td>
-                <td>${item.score}</td>
-                <td>${item.date}</td>
-                <td><a href="#" class="btn-small">View</a></td>
+                <td>${orgLink}</td>
+                <td>${item.agentQuality}</td>
+                <td>${item.codeQuality}</td>
+                <td>${item.visualQuality}</td>
             </tr>
             `;
         });
