@@ -76,9 +76,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // Demo mock data for new categories
 
         const productsData = [
-            { rank: 1, name: 'MGX (BoN-3)', model: 'MGX Framework', org: 'MGX Team', orgUrl: 'https://mgx.ai', agentQuality: 0.78, codeQuality: 0.72, visualQuality: 0.41 },
+            { rank: 1, name: 'MGX (BoN-3)', model: 'MGX Framework', org: 'MGX Team', orgUrl: 'https://mgx.dev/', agentQuality: 0.78, codeQuality: 0.72, visualQuality: 0.41 },
             { rank: 2, name: 'Lovable', model: 'Lovable Framework', org: 'Lovable Team', orgUrl: 'https://lovable.dev', agentQuality: 0.74, codeQuality: 0.58, visualQuality: 0.47 },
-            { rank: 3, name: 'MGX', model: 'MGX Framework', org: 'MGX Team', orgUrl: 'https://mgx.ai', agentQuality: 0.60, codeQuality: 0.68, visualQuality: 0.41 },
+            { rank: 3, name: 'MGX', model: 'MGX Framework', org: 'MGX Team', orgUrl: 'https://mgx.dev/', agentQuality: 0.60, codeQuality: 0.68, visualQuality: 0.41 },
             { rank: 4, name: 'Bolt', model: 'Bolt Framework', org: 'StackBlitz', orgUrl: 'https://bolt.new', agentQuality: 0.54, codeQuality: 0.69, visualQuality: 0.50 }
         ];
 
