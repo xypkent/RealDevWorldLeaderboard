@@ -350,22 +350,22 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // 视频播放时隐藏播放按钮，但保持覆盖层透明以允许点击
+        // 视频播放时隐藏播放按钮
         video.addEventListener('play', function() {
             playButton.style.opacity = '0';
-            overlay.style.pointerEvents = 'none'; // 允许点击穿透到视频控制
+            overlay.style.background = 'transparent'; // 播放时覆盖层透明但仍可点击
         });
 
         // 视频暂停时显示播放按钮
         video.addEventListener('pause', function() {
             playButton.style.opacity = '1';
-            overlay.style.pointerEvents = 'auto';
+            overlay.style.background = 'rgba(0, 0, 0, 0.3)'; // 恢复半透明背景
         });
 
         // 视频结束时显示播放按钮
         video.addEventListener('ended', function() {
             playButton.style.opacity = '1';
-            overlay.style.pointerEvents = 'auto';
+            overlay.style.background = 'rgba(0, 0, 0, 0.3)';
         });
 
         // 鼠标悬停时显示控制元素
