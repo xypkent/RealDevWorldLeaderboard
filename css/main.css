@@ -1728,6 +1728,27 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom-color: var(--primary-color);
 }
 
+/* 当 research-tab 用作按钮时的特殊样式 */
+.btn.research-tab {
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: var(--radius);
+    border-bottom: none;
+}
+
+.btn.research-tab:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.btn.research-tab.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-bottom: none;
+}
+
 .research-content {
     position: relative;
 }
