@@ -332,40 +332,52 @@ document.addEventListener('DOMContentLoaded', function() {
     const playButton = document.querySelector('.play-button');
 
     if (videoWrapper && video && overlay && playButton) {
-        // 点击播放按钮或overlay播放视频
+        // 点击播放按钮播放视频
         overlay.addEventListener('click', function() {
             if (video.paused) {
                 video.play();
-                overlay.style.opacity = '0';
+            } else {
+                video.pause();
             }
         });
 
-        // 视频播放时隐藏overlay
-        video.addEventListener('play', function() {
-            overlay.style.opacity = '0';
-        });
-
-        // 视频暂停时显示overlay
-        video.addEventListener('pause', function() {
-            overlay.style.opacity = '1';
-        });
-
-        // 视频结束时显示overlay
-        video.addEventListener('ended', function() {
-            overlay.style.opacity = '1';
-        });
-
-        // 鼠标离开视频区域时隐藏overlay（如果视频正在播放）
-        videoWrapper.addEventListener('mouseleave', function() {
-            if (!video.paused) {
-                overlay.style.opacity = '0';
-            }
-        });
-
-        // 鼠标进入视频区域时显示overlay（如果视频暂停）
-        videoWrapper.addEventListener('mouseenter', function() {
+        // 点击视频本身也能播放/暂停
+        video.addEventListener('click', function() {
             if (video.paused) {
-                overlay.style.opacity = '1';
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+
+        // 视频播放时隐藏播放按钮，但保持覆盖层透明以允许点击
+        video.addEventListener('play', function() {
+            playButton.style.opacity = '0';
+            overlay.style.pointerEvents = 'none'; // 允许点击穿透到视频控制
+        });
+
+        // 视频暂停时显示播放按钮
+        video.addEventListener('pause', function() {
+            playButton.style.opacity = '1';
+            overlay.style.pointerEvents = 'auto';
+        });
+
+        // 视频结束时显示播放按钮
+        video.addEventListener('ended', function() {
+            playButton.style.opacity = '1';
+            overlay.style.pointerEvents = 'auto';
+        });
+
+        // 鼠标悬停时显示控制元素
+        videoWrapper.addEventListener('mouseenter', function() {
+            if (!video.paused) {
+                // 播放时短暂显示播放按钮
+                playButton.style.opacity = '0.7';
+                setTimeout(() => {
+                    if (!video.paused) {
+                        playButton.style.opacity = '0';
+                    }
+                }, 2000);
             }
         });
         

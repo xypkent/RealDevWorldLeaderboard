@@ -1551,6 +1551,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0;
     transition: all 0.3s ease;
     cursor: pointer;
+    pointer-events: auto;
 }
 
 .video-wrapper:hover .video-overlay {
